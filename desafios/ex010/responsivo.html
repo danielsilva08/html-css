@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Responsividade</title>
+    <style>
+        body {
+            background-color: grey;
+        }
+
+        main {
+            background-color: white;
+            padding: 20px;
+            border-radius: 20px;
+
+            min-width: 320px;
+            max-width: 800px;
+            margin: auto; /*Pagina ao centro*/
+        }
+
+        img {
+            width: 100%; /* pagina fica em um tamanho legal ao aumentar e diminuir a pagina*/
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Testando Responsividade</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique porro in sint. Quae, nobis nesciunt! Harum repellat neque alias, ab similique et dignissimos, obcaecati ipsam facere totam velit fuga. Rem! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe libero voluptas maxime necessitatibus officia at similique itaque odit iure ab, quos ullam nihil non est accusantium excepturi odio quam blanditiis?Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quos, commodi enim minus dolores dignissimos inventore illo perspiciatis incidunt sunt recusandae nemo quis vel nostrum eveniet atque natus quisquam voluptates.</p>
+        <!--A IMAGEM FICA RESPONSIVA COM O SOURCE AO DIMINUIR A PAGIMA ELA MUDA A FOTOS PARA UMA MENOR OU MAIOR PODEMOS COLOCAR VARIOS TAMANHOS DE IMAGENS-->
+        <picture>
+            <source media="(max-width: 600px)" srcset="imagens/irina-blok-pq.jpg">
+            <img src="imagens/irina-blok.jpg" alt="Irina Block">
+        </picture>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur harum blanditiis nisi odit! Assumenda quae officia exercitationem, consequatur tempora autem perferendis. Culpa itaque provident voluptatibus harum. Fugit suscipit iste repellendus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio dicta tempore repellat reprehenderit sequi eligendi cumque provident saepe! Hic reiciendis voluptatibus esse odio accusamus eius ducimus ipsam aspernatur ab. Numquam.</p>
+    </main>
+</body>
+</html>

@@ -1,0 +1,216 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face { /*font baixada*/
+    font-family: 'Android';
+    src: url('../fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+}
+
+/* cores a serem ultilizadas*/
+/* Pseudo classe root e a raíz da arvore tudo que definir ai vai servir para o documento inteiro. todas as variáveis em css tem que começar com dois traços.*/
+:root {
+    --cor0: #c5ebd6;
+    --cor1: #83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: "Bebas Neue", sans-serif; /*font importada do google fontes*/
+    --font-android: 'Android', cursive; /*font baixada*/    
+}
+
+/*Seletor global para zerar todos os elementos da página*/
+* { 
+    margin: 0px;
+    padding: 0px;
+}
+
+body
+{
+    background-color: var(--cor0); /*COR DE FUNDO PUXANDO DA VARIÁVEL LA DO ROOT*/
+    font-family: var(--fonte-padrao);/*LETRAS PUXANDO DA VARIÁVEL LA DO ROOT*/
+}
+
+/*TODOS O LINK QUE FOREM DA CLASSE EXTERNO, EU VOU COLOCAR DEPOIS DELE UM EMOJI ::after DEPOIS DO ELEMENTO*/
+a.externo::after {
+    content: '\00A0\1F517'; /*coloca um emoji de corrente na frente dos links externo. 00A0 ESPAÇO ANTES DO EMOJI.*/
+}
+
+header {
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));/*COR PUXANDO DA VARIÁVEL LA DO ROOT, DA COR 3 ATÉ A COR 5 GRADIENT PUXANDO PARA BAIXO TO BOTTOM*/
+    min-height: 150px; /*Tamanho bom para configurar os sites, responsividade, barra do render fica tamanho bom*/
+    text-align: center; /*centraliza o h1 e o p*/
+    padding-top: 40px; /*h1 não fica tão colado na margem de cima mexe dentro do elemento*/
+}
+
+header > h1 { /* > significa filho do header*/
+    color: white;
+    font-family: var(--fonte-destaque); /*LETRAS PUXANDO DA VARIÁVEL LA DO ROOT*/
+    font-size: 3em; /*tamanho da fonte*/
+    font-weight: normal; /*fonte normal sem negrito*/
+    margin-bottom: 20px; /*espaçamento entre o h1 e o p*/
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267); /*Leve sombra no texto*/
+}
+
+header > p { /* > significa filho do header*/
+    color: white;
+    font: var(--fonte-padrao); /*fonte a ser usada*/
+    font-size: 1.2em; /*tamanho da fonte*/
+    max-width: 500px; /*tamanho maximo do cabeçalho com resposividade para quebrar quando diminuir a página em outro aparelhos ou seja adaptar.*/
+    margin: auto; /*tive que centralizar para fica no meio por caso do max-width do main*/
+    margin-bottom: 30px; /* Pra escrita não ficar colado no menu de navegação em dispositivos pequenos*/
+    padding-left: 10px; /* Para não ficar colocado nas laterais as ecritas*/
+    padding-right: 10px; /* Para não ficar colocado nas laterais as ecritas*/
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267); /*Leve sombra no texto*/
+}
+
+
+
+nav {
+    background-color: var(--cor5); /*COR PUXANDO DA VARIÁVEL LA DO ROOT*/
+    padding: 10PX; /*espaçamento das letras do cantos part baixo, cima e lados dentro da borda*/
+    box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.363); /*PEQUENA SOMBRA NO MENU NAV COM ESPALHAMENTO LEGAL*/
+}
+
+nav > a { /* > significa filho do nav*/
+    color: var(--cor1); /*cor dos links fica em verde bem clarinho*/
+    padding: 10px; /*as letras dos menus ficam separadinhas uma das outras com espaçamento de todos os lados*/
+    border-radius: 5px; /*o backgroud color do a:hover fica com um leve borda aredondada ao passar o mouse*/
+    text-decoration: none; /*Tira o sumblinhado de baixo das escritas do menu*/
+    font-weight: bold; /*as escritas do menu ficam em negrito*/
+    transition-duration: 0.5s; /*quando passar o mouse por cima do menu vai durar 0.5s para fazer as mudanças*/
+
+}
+
+nav > a:hover { /* quando eu pasar o mouse encima dos links do menu eles ficaram nas cores abaixo com um retangulo verde e um cor verde.*/
+    background-color: var(--cor3);
+    color: var(--cor5);
+   
+}
+
+main {
+    min-width: 300px; /*Tamanho bom para configurar os sites, responsividade*/
+    max-width: 1000px; /*Tamanho bom para configurar os sites, responsividade para os tamanhos de aparelhos*/
+    margin: auto; /*centralizar a página*/
+    margin: bottom; /*Para separ do footer, margem de baixo*/
+    padding: 20px; /*espaçamento das letras do cantos part baixo, cima e lados dentro da borda*/
+    background-color: white; /*Página ao centro fica branca*/
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.418); /*sombras na bordas laterais*/
+    border-bottom-left-radius: 10px; /*Aredondamento somente na parte de baixo da borda*/
+    border-bottom-right-radius: 10px; /*Aredondamento somente na parte de baixo da borda*/
+}
+
+main  h1 {
+    color: var(--cor5); /*COR PUXANDO DA VARIÁVEL LA DO ROOT*/
+    font-family: var(--font-android); /*LETRAS PUXANDO DA VARIÁVEL LA DO ROOT*/
+    font-weight: normal; /*fonte normal sem negrito*/
+    font-size: 1.8em; /*Tamanho da escrita*/
+}
+
+main h2 {
+    font-family: var(--font-android); /*Fonte da escrita*/
+    color: var(--cor4); /*Cor da Esctira*/
+    font-size: 1.3em; /*Tamanho da escrita*/
+    font-weight: normal; /*fonte normal sem negrito*/
+    background-image: linear-gradient(to right, var(--cor1), transparent); /*cria uma borda envolta da escrita pegando a cor 1 até ficar transparente da esquerda para a direita*/
+    text-indent: 8px;/*Espaçamento da letra da esquerta pra a direita*/
+}
+
+main p {
+    margin: 15px 0px; /*Espaçamento das escritas dos paragrafos encima, baixo e os lados*/
+    text-align: justify; /*alinhamento das escritas*/
+    text-indent: 30px; /*Recuo. Espaçamento na primeira escrita do parágrafo*/
+    font-size: 1em; /*tamanho da fonte*/
+    line-height: 2em; /*Altura da linha, entre uma linha e outra da escrita terá um espaçamento de 2em*/
+}
+
+main strong {
+    color: var(--cor4); /*links fica na cor verde*/
+    font-weight: bold; /*Negrito*/
+}
+
+main a {
+    text-decoration: none;/*Tira o sumblinhado de baixo das escritas do menu*/
+    font-weight: bold; /*Negrito*/
+    color: var(--cor5);
+    background-color: var(--cor1); /*links fica com uma borda verde claro*/
+    padding: 2px 6px; /*fica o elemnto dentro da borda do background color mais espaçada emcima e nas laterais*/
+}
+
+/*quando eu passar o mouse encima do link*/
+main a:hover {
+    text-decoration: underline; /*Apareçera um sumblinhado de baixo das escritas do menu ao passar o mouse encima*/
+    color: var(--cor4); /*A escritas do menu ficara nesta cor*/
+}
+
+main img {
+    width: 100%; /* imagem fica em um tamanho bom para todos os tipos de aparelho, resposividade*/
+}
+
+main img.pequena { /*criei uma classe nesta imagem para diminuir a página, pois não fizemos uma imagem de outro tammanho para usar o picture e o source media*/
+    max-width: 350px; /*tamanho da imagem, maximo 350 px*/
+    display: block; /*para centralizar a imagem na pagina, tem que usar o margin: auto*/
+    margin: auto; /*para centralizar a imagem na pagina*/
+}
+
+div.video {
+    background-color: var(--cor5);
+    margin: 0px -20px 30px -20px; /*Background color fica em toda a margem colado nas laterais com os -20px e o 30px separa o video e do aside embaixo para não ficar colado. */
+    padding: 20px; /*elemento dentro da margim fica mais dentro da magim ou seja o video fica mais dentro da imagem*/
+    padding-bottom: 56.5%; /*para aumentar o background color. Devido a position ele ficou pequeno e o video flutando e ao iniciar o video fica uma barra preta na lateral para tirar está barra deve mexer na % até ela sumir.*/
+    position: relative;
+}
+
+div.video > iframe{
+    position: absolute; /*position CSS é usada para que o elemento da página parta do ponto superior esquerdo a outros elementos*/
+    top: 5%; /*mexe entre a topo do video e a margem*/
+    left: 5%; /*mexe entre a lateralzinha do video e a margem*/
+    width: 90%; /*Largura*/
+    height: 90%; /*Altura*/
+}
+
+aside {
+    background-color: var(--cor1);
+    padding: 10px; /*as letras ficam separadinhas uma das outras com espaçamento de todos os lados*/
+    border-radius: 10px; /*as borda do background color ficam aredondadas*/
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.281) /*cria uma leve sombra em volta do backgloud color*/
+}
+
+aside > h3 {
+    background-color: var(--cor5);
+    color: white;
+    padding: 10px; /*as letras ficam separadinhas uma das outras com espaçamento de todos os lados*/
+    margin: -10px -10px 0px -10px; /*Margem do backgound color cresce -10px pra fora. Margem negativa. Porém ele perde o aredondamento feito no aside com o border-radius*/
+    border-radius: 10px 10px 0px 0px;/* Cria novamente o aredodamento na parte superior somente na esq. e dir.*/
+}
+
+/* PARA CONFIGURAR AS BOLINHAS POIS FICARAM PARA FORA DO BACKGROUND COLOR*/
+aside > ul { 
+    list-style-type: '\2714\00A0\00A0';/*Símbolo do check, pego no emojipidea. 00A0 ele a um spaço sem quebra, entre a escrita e o emoji isso se chama NBSP*/
+    list-style-position: inside; /* A bolinha ficara dentro do backgroud color. outside ficará ara fora*/
+    columns: 2; /* A lista ficará em duas colunas*/
+}
+
+footer {
+    background-color: var(--cor5);
+    margin-top: 30px; /*Separação do footer do aside em cima*/
+    color: white;
+    text-align: center;
+    padding: 10px; /*espaçamento das letras do cantos part baixo, cima e lados dentro da borda*/
+    font-size: 0.8em;
+}
+
+footer a { 
+    color: white;
+    font-weight: bolder; /*Fonte em negrito*/
+    text-decoration: none; /*Tira o sumblinhado de baixo das escritas do link*/
+}
+
+footer a:hover {
+    text-decoration: underline; /*Apareçera um sumblinhado de baixo das escritas do link ao colocar o mouse encima*/
+    color: var(--cor1); /*ficará com a cor verde no link ao colocar o mouse encima*/
+}

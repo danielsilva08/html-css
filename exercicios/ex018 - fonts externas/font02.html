@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes Externas</title>
+    <style>
+        @font-face {
+            font-family: 'London';
+            src: url(fonts/OldLondon.ttf) format('truetype'), url(fonts/Olondona.otf) format('opentype');
+            font-weight: normal;
+            font-size: normal;
+        }
+        body {
+            font-family: 'Courier New', Courier, monospace;
+        }
+        h1 {
+            font-family: 'London', Times, serif; /*COLOCA O MESMO NOME QUE COLOQUEI PARA A FONT-FACE*/
+            font-size: 3em;
+            font-weight: normal; /*letra não ficar em negrito*/
+        }
+        /* TIPOS NO format()
+    -opentype para (otf)
+    -truetype (ttf)
+    -embedded-opentype
+    -truetype-aat (Apple Advanced Typography)
+    -svg
+    */
+    </style>
+    
+</head>
+<body>
+    <h1>Título</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis quis, corporis harum autem impedit enim alias odio esse doloremque quia eligendi molestias error. Non culpa nemo ipsa quo minus a.</p>
+</body>
+</html>

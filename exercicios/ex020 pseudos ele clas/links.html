@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <style>
+        /* # = id
+           . = class
+           : = pseudo-class
+           :: = pseudo-elemento
+           > = childrem (filho) EX div > p / PARA MEXER DENTRO DO PARAGRAFO QUE ESTA DENTRO DA DIV FAZENDO QUE ELE SE ESCONDA ATRAVÉS DO display: none;
+
+           div:hover > p / PARA MEXER DENTRO DO PARAGRAFO QUE ESTA DENTRO DA DIV FAZENDO QUE ELE APAREÇA AO PASSAR O MOUSE POR CIMA ATRAVÉS DO display: block;
+        */   
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        a { 
+            color: red;/*letras dos links fica em vermelho*/
+            text-decoration: none; /*tira o subrinhado debaixo das letras*/
+            font-weight: bold;/*Links fica em negrito*/
+        }
+
+        a:visited { /*Se o link for visitado ele fica na cor abaixo*/
+            color: darkred;
+        }
+        
+        a:hover { /*Faz com que ao passar o mouse por cima fique sublinhado e preto*/
+            color: black;
+            text-decoration: underline;
+        }
+        a:active { /*Ao clicar no Link fica em amarelo*/
+            color: yellow;
+        }
+        /*3 EXEMPLOS DE PSEUDO ELEMENTO
+        a::after {
+            content: '[link]'; FICA ESCRITO LINK NA FRENTE DOS LINKS A SEREM CLICADOS
+            text-decoration: none;
+            font-weight: normal; FONTE NORMAL SEM NEGRITO
+            color: darkgrey;
+        a::before{
+            content:'⇒' fica com este simbolo antes do link a ser clicado
+        }    
+
+        a::after{ 
+           content:'⇐' fica com este simbolo depois do link a ser clicado
+           }
+        */ 
+
+         /* Este pseudo elemento usei somente em uma classe especial somente no primeiro link*/
+        .especial {
+            background-color: rgb(172, 241, 238);
+        
+        }
+        .especial::before {
+            content: '⇒'; /*fica com este simbolo depois do link a ser clicado*/
+        }
+        .especial::after {
+            content: '⇐'; /*fica com este simbolo antes do link a ser clicado*/
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Peersonalizando Links</h1>
+    <ul>
+        <li><a href="https://github.com/gustavoguanabara" class="especial" target="_blank">Repositório Github</a></li>
+        <li><a href="https://www.youtube.com/cursoemvideo" target="_blank">Canal do Youtube</a></li>
+        <li><a href="https://www.cursoemvideo.com/" target="_blank">Site Cursoemvideo</a></li>
+    </ul>
+    
+</body>
+</html>

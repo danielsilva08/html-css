@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Hover</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div > p { /* mexe no paragráfo que está dentro da div ou seja o filho da div*/
+            display: none; /*faz com que o paragráfo que está dentro da div não apareça no site*/
+
+        }
+
+        div:hover > p { /*faz com que o paragráfo que está dentro da div apareça quando passar o mouse*/
+            display: block; /*para mostrar o paragráfo escondido da div quando passar o mouse por cima*/
+            color: white; /*cor da letra branca*/
+            background-color: red; /*fundo em vermelho*/
+            width: 300px; /*Largura*/
+
+        }
+        div:hover {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de Hover</h1>
+    <p>Passe o Mouse sobre o texto abaixo</p>
+    <div>Passe o mouse aqui
+     <p>TEXTO ESCONDIDO...</p>
+    </div>
+    <p>Fim do Exemplo.</p>
+</body>
+</html>

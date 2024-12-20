@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+body {
+    background-color: rgb(0, 217, 255); /*Cor de fundo da página*/
+    font-family: Arial, Helvetica, sans-serif; /*Fonte da letra*/
+    font-size: 20px; /*Tamanho da letra*/
+}
+h1 {
+    color: brown; /*Cor da Letra*/
+    background-color: blue; /*Cor de fundo da letra*/
+    font-size: 1.5em; /*Tamanho da letra*/
+}
+h2 {
+    color:blueviolet; /*Cor da letra*/
+    font-size: 1.2em;  /*Tamanho da letra*/
+}
+p {
+    text-align: justify; /*Alinhamento das letras*/
+}

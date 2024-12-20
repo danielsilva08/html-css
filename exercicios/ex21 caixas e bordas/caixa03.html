@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borda personalizada</title>
+</head>
+<style>
+    h1 {
+        border: 10px solid black; /*pode colocar o transparent no caso se for colocar a borda com imagem*/
+        padding: 10px;
+        border-image-source: url('bola.png');
+        border-image-slice: 110; /*FATIA A IMAGEM O NUMERO PARA AUMENTAR OU DIMINUIR AS IMAGENS CASO NÃO ESTEJA APARECENDO, POSSO TAMBÉM AUMENTAR OU DIMINUIR O BORDER A IMAGEM FICA NO LUGAR DA BORDA PRETA */
+        border-image-repeat: repeat; /*REPETE A IMAGEM tem a opção do stretch que estica as bolas*/
+        text-align: center;
+
+        /*simplificação do código border-image: url('') 110 repeat;*/
+    }
+</style>
+<body>
+    <h1>Teste de Borda</h1>
+</body>
+</html>

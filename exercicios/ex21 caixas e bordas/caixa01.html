@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Caixas</title>
+</head>
+<style>
+    h1 { /*box-level* o h1 e display block padrão na tag h1*/
+        background-color: antiquewhite; /*caixa em volta do h1*/
+        height: 300px;
+        width: 300px;
+        
+        /*Borda em volta da caixa */
+        border-width: 10px;   
+        border-style: solid; 
+        border-color: aqua;
+        /*simplificação da borda na mesma ordem
+        border: 10px solid aqua;
+        */
+
+        /*distancia do elemento da borda*/
+        padding-top: 10px; /*Topo*/
+        padding-right: 10px; /*Direita*/
+        padding-bottom: 10px; /*Baixo*/
+        padding-left: 10px; /*Esquerda*/
+        /*simplificação da padding se os 4 lados forem o mesmo valor basta colocar 1 valor só sempre topo direita baixo esquerda pode colocar dois valores também daí ele coloca o de cima  e baixo com um valor e esq. e direita com o mesmo.
+        padding: 10px; */
+
+        margin-top: 20px; /*Topo*/
+        margin-right: 20px; /*Direita*/
+        margin-bottom: 40px; /*Baixo*/
+        margin-left: 20px; /*Esquerda*/
+        /*simplificação a margem na mesma ordem
+        margin: 20px 20px 40px 20px;
+        margin: 20px auto 40px auto; centralizar as margen da esuqerda e direita.
+        */
+
+        /*fica entre a margin e a borda mais dentro da margin*/ 
+        outline-width: 10px; /*Larguda espessura*/
+        outline-style: dashed;
+        outline-color: blueviolet;
+        /*simplificação a outline na mesma ordem
+        outline: 10px dashed blueviolet*/
+    }
+
+    a { /*inline-level por padrão o display e inline na tag a*/
+        border-width: 10px; /*Larguda espessura*/
+        border-style: solid; /*tiplo de borda*/
+        border-color: brown; /*cor da borda*/
+        /*simplificação a borda na mesma ordem
+        border: 10px solid brown;
+        */
+   
+
+    /*distancia do elemento da borda*/
+        padding-top: 10px; /*Topo*/
+        padding-right: 10px; /*Direita*/
+        padding-bottom: 10px; /*Baixo*/
+        padding-left: 10px; /*Esquerda*/
+        /*simplificação da padding se os 4 lados forem o mesmo valor basta colocar 1 valor só sempre topo direita baixo esquerda pode colocar dois valores também daí ele coloca o de cima  e baixo com um valor e esq. e direita com o mesmo.
+        padding: 10px; */
+    }
+</style>
+<body>
+    <h1>Exemplo de caixa box-level</h1>
+    <p>Paragráfos também são modelo de box-level, mas os ,<a href="#"> links são exemplos de caixas inline-level</a>. Vamos ver como tudo isso funciona.</p>
+</body>
+</html>
