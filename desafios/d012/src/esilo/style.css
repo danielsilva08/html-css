@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body {
+    min-height: 100vh; /*vh altura*/
+    background-color: darkgray;
+}
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+header > h1 {
+    padding-top: 50px;
+    /*text-transform: uppercase; TODAS AS LETRA FICA MAIUSCULA*/
+    font-variant: small-caps; /*TODAS AS LETRA FICA MAIUSCULA COM AS PRIMEIRAS LETRAS MAIORES*/
+}
+
+header > p {
+    padding-bottom: 50px;
+}
+
+/* SE HOUVER LINKS NO HEADER OU FOOTER NESTE SITE NÃO HÁ*/
+header a, footer a {
+    color: white;
+    text-decoration: none; /*tira o sublinhado debaixo do link*/
+    font-weight: bold; /*negrito no link*/
+}
+
+header a:hover, footer a:hover {
+    text-decoration: underline; /* ao passar p mouse por cima fica como sublinhado*/
+}
+
+section {
+    padding-top: 10vh; /*ganha 10%da altura entre 1 e outro paragrafo para fazer o efeito nas fotos*/
+    padding-bottom: 10vh;
+    line-height: 2em; /*espaçamento das linha da escrita*/
+    padding-left: 30px; /*espaçamento do canto*/
+}
+
+section.normal{
+    background-color: white;
+    color: black;
+}
+
+section.imagem {
+    background-color: rgb(51, 51, 51);
+    color: white;
+}
+
+section.imagem > p {
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.253); 
+
+}
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
