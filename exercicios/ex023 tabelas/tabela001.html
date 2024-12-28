@@ -11,24 +11,25 @@
 
         table {
             width: 400px;
+            height: 400px;
             border-collapse: collapse; /*TIRA A SEPARAÇÃO ENTRE AS BORDAS DO BORDER NO TD*/
             border: 8px groove red; /*borda por fora da tabela do border do td*/
            
         }
 
-        tr.linha {
-            background-color: gray;
-        }
-
+        
         td {
             border: 1px solid black;
             padding: 8px;
+            text-align: center; /*ALINHAMENTO HORIZONTAL*/
+            vertical-align: middle; /*ALINHAMENTO VERTICAL*/
         }
 
-        td.dado {
-            background-color: blue;
-            color: white;
+        .numero {
+            text-align: right;
         }
+
+       
     </style>
 </head>
 <body>
@@ -46,15 +47,15 @@
             <td>B1</td>
             <td>C1</td>
         </tr>
-        <tr class="linha"> <!--Segunda linha-->
+        <tr> <!--Segunda linha-->
             <td>A2</td>
             <td>B2</td>
-            <td>C2</td>
+            <td class="numero">C2</td>
         </tr>
         <tr> <!--Terceira linha-->
             <td>A3</td>
-            <td class="dado">B3</td>
-            <td>C3</td>
+            <td>B3</td>
+            <td class="numero">C3</td>
         </tr>
         <tr> <!--Quarta linha-->
             <td>A3</td>
