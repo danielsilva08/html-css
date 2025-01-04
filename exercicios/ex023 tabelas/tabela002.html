@@ -11,6 +11,7 @@
         table {
             width: 500px;
             border-collapse: collapse; /*tirar o espaço da tabela. Unir as linhas*/
+            position: relative;
         }
         caption {
             font-size: 1.5em; /*tamanho da Letra*/
@@ -27,6 +28,13 @@
             background-color: gray;
             color: white;
         }
+        /*CABEÇALHO FIXO NA TABELA COLOCAR PRIMEIRO POSIÇÃO RELATIVA NO TABLE*/
+        thead > tr > th {
+            position: sticky; /*COLAR*/
+            top: -1PX; /* COLAR NESTA POSIÇÃO*/
+            background-color: gray; /*COLOCAR MESMA COR DO THEAD E TFOOT*/
+        }
+
 
         /*EFEITO ZEBRADO NA TABELA
         pode ser colocado no lugar do 2n odd impar even par*/
@@ -76,6 +84,60 @@
             <tr>
                 <td>Paraná</td>
                 <td class="num">11.835.379</td>
+            </tr>
+            <tr>
+                <td>Santa Catarina</td>
+                <td class="num">7.762.154</td>
+            </tr>
+           
+            <tr>
+                <td>Alagoas</td>
+                <td class="num">3.125.254</td>
+            </tr>
+            
+            <tr>
+                <td>Espírito Santo</td>
+                <td class="num">3.975.100</td>
+            </tr>
+            <tr>
+                <td>Sergipe</td>
+                <td class="num">2.211.868</td>
+            </tr>
+            <tr>
+                <td>Santa Catarina</td>
+                <td class="num">7.762.154</td>
+            </tr>
+           
+            <tr>
+                <td>Alagoas</td>
+                <td class="num">3.125.254</td>
+            </tr>
+            
+            <tr>
+                <td>Espírito Santo</td>
+                <td class="num">3.975.100</td>
+            </tr>
+            <tr>
+                <td>Sergipe</td>
+                <td class="num">2.211.868</td>
+            </tr>
+            <tr>
+                <td>Santa Catarina</td>
+                <td class="num">7.762.154</td>
+            </tr>
+           
+            <tr>
+                <td>Alagoas</td>
+                <td class="num">3.125.254</td>
+            </tr>
+            
+            <tr>
+                <td>Espírito Santo</td>
+                <td class="num">3.975.100</td>
+            </tr>
+            <tr>
+                <td>Sergipe</td>
+                <td class="num">2.211.868</td>
             </tr>
             <tr>
                 <td>Santa Catarina</td>
