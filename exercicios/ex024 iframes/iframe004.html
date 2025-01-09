@@ -8,8 +8,12 @@
 <body>
     <h1>Meu site principal</h1>
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi excepturi illo beatae perferendis unde impedit quam quo eum sit, fuga qui at veritatis fugiat, voluptatum perspiciatis nulla officiis alias magni.</p>
-    <!--SEGURANÇA PARA O IFRAME EM SITES DE CADASTRO: SANDBOX sandbox="sandbox"PARA BLOQUEAR DENTRO DO IFRAME QUALQUER OUTRO SITE ao clicar no botão cadastrar SEGURANÇA NO MAXIMO./ referrerpolicy="no-referrer" para não coletar os dados do ususario-->
-    <iframe src="paginas-extras/pag004.html" sandbox="sandbox" referrerpolicy="no-referrer">
+    <!--SEGURANÇA PARA O IFRAME EM SITES DE CADASTRO: SANDBOX sandbox="sandbox"PARA BLOQUEAR DENTRO DO IFRAME QUALQUER OUTRO SITE ao clicar no botão cadastrar SEGURANÇA NO MAXIMO./ referrerpolicy="no-referrer" para não coletar os dados do ususario
+    
+    sandbox="allow-same-origin allow-forms allow-scripts" conteúdo de mesma origem dentro da pasta.
+    allow-forms permitir formúlarios. allow-scripts permite scripts-->
+    
+    <iframe src="paginas-extras/pag004.html" sandbox="allow-same-origin allow-forms allow-scripts" referrerpolicy="no-referrer">
         Seu navegador não é compatível com isso..
     </iframe>
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur rem consectetur pariatur quo, fuga molestiae explicabo aliquid fugiat, autem, quaerat quis maiores libero excepturi laboriosam officia. Nulla unde corporis id.</p>
