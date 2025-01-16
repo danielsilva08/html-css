@@ -6,16 +6,16 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="cadastro.php" method="post">
+    <form action="cadastro.php" method="post" autocomplete="on">
         <h1>Teste de Formulário</h1>
         <p>
             <label for="iusu">Usuário:</label>
-            <input type="text"name="usu" id="iusu" required>
+            <input type="text"name="usu" id="iusu" required minlength="5" maxlength="20" size="10" placeholder="Digite seu nome" autocomplete="username">
         </p>
 
         <p>
             <label for="isen">Senha:</label>
-            <input type="password" name="sen" id="isen" required>
+            <input type="password" name="sen" id="isen" required minlength="8" maxlength="20" placeholder="Minimo 8 letras" autocomplete="current-password">
         </p>
 
         <p>
@@ -26,6 +26,9 @@
 
      <!--id se relaciona mais com javascript e o label e name com PHP.
     required significa requerido, este campo tem que ser preenchido.
-    POST quando se trata de dados sensíveis tipo senha e documentos-->
+    POST quando se trata de dados sensíveis tipo senha e documentos.
+    minlength = quantidade minima de caracteris a digitar
+    maxlength = quantidade maxima de caracteris a digitar.
+    size= quantidade de letras que o campo vai mostrar-->
 </body>
 </html>
