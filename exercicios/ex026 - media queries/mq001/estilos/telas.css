@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+/*Estilo para telas*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+
+header {
+    background-color: rgb(158, 158, 158);
+}
+
+ header > h1 {
+    text-align: center;
+ }
+/*Lista principal*/ 
+ menu ul {
+    list-style-type: none; /*Para sumir a bolinha defrete dos icones do menu*/
+    background-color: gray;
+ }
+/*Cada intem da lista*/
+ menu li {
+    background-color: rgb(75, 75, 75);
+    color: white;
+    display: inline-block; /*Para o menu ficar um a frete do outro*/
+    padding: 10px;
+ }
+
+ article {
+    display: block; /*Para poder centraliar os artigos na página, junto com margin:auto*/
+    margin: auto; /*centralizar os artigos da página*/
+    width: 600px;
+ }
