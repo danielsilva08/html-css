@@ -2,6 +2,86 @@
 
 /*Todas as demais mídias*/
 
+/*typical device breakpoints
+------------------------------
+Pequenas telas: até 600px
+Celular: de 600px até 780px
+Tablet: 768px até  992px
+Desktop: 992px até  1200px
+Grandes telas: acima de 1200px
+*/
+
+/*Impressão*/
 @media print {
-    
+    * {
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    body {
+         background-image: url(../imagens/back-print.jpg);/*Desnecessario pois não imprimirá o background image*/
+    }
+
+    main {
+        width: 90vw;
+        border: 4px solid black;
+    }
+    /* main::after/signeifica depois do main*/
+    main::after {
+        content: 'Essa impressão foi feita através do site www.curso em video.'; /*mensagem que aparecerá somente na impressão*/
+        text-decoration: overline; /*overline: linha em cima*/
+    }
+
+    main h1 {
+        text-shadow: none;
+        color: black;
+    }
+
+    img#phone {display: none;} /*Esconder a imagem*/
+    img#tablet {display: none;} /*Esconder a imagem*/
+    img#print {display: block;} /*Imagem que vai aparecer na impressão*/
+    img#pc {display: none;} /*Esconder a imagem*/
+    img#tv {display: none;} /*Esconder a imagem*/
+}
+
+/*Tablet*/
+@media screen and (min-width: 768px) and (max-width: 992px){
+    body {
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+
+    img#phone {display: none;} /*Esconder a imagem*/
+    img#tablet {display: block;} /*Imagem que vai aparecer*/
+    img#print {display: none;} /*Esconder a imagem*/
+    img#pc {display: none;} /*Esconder a imagem*/
+    img#tv {display: none;} /*Esconder a imagem*/
+}
+
+/*Desktop*/
+@media screen and (min-width: 992px) and (max-width: 1200px){
+    body {
+        background-image: url(../imagens/back-pc.jpg);
+    }
+
+    img#phone {display: none;} /*Esconder a imagem*/
+    img#tablet {display: none;} /*Esconder a imagem*/
+    img#print {display: none;} /*Esconder a imagem*/
+    img#pc {display: block;} /*Imagem que vai aparecer*/
+    img#tv {display: none;} /*Esconder a imagem*/
+}
+
+/*Grandes telas*/
+@media screen and (min-width: 1200px) {
+    body {
+        background-image: url(../imagens/back-tv.jpg);
+    }
+
+    main {
+        width: 700px;
+    }
+
+    img#phone {display: none;} /*Esconder a imagem*/
+    img#tablet {display: none;} /*Esconder a imagem*/
+    img#print {display: none;} /*Esconder a imagem*/
+    img#pc {display: none;} /*Esconder a imagem*/
+    img#tv {display: block;} /*Imagem que vai aparecer*/
 }
