@@ -6,8 +6,10 @@
     <title>Media Query</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
     <link rel="stylesheet" href="stilos/style.css">
+    <link rel="stylesheet" href="stilos/media-query.css">
 </head>
-<body>
+<!--onresize = quando eu mudar o tamanho da tela-->
+<body onresize="mudouTamanho()">
     
     <header>
         <h1>Menu Site</h1>
@@ -34,7 +36,7 @@
 
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates soluta, odio sed asperiores officia praesentium nobis sequi reprehenderit voluptas! Ab dolor ad recusandae iusto fugiat sit tempore placeat error nesciunt? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum enim, earum pariatur eaque assumenda neque voluptatem, fugiat id sed aspernatur mollitia debitis atque, facere saepe. Illo explicabo ipsam minus iure!</p>
         </article>
-      <!--EM JAVASCRIPT (== SIGNIF IGUAL) (= SIGNIF. RECEBE)
+       <!--EM JAVASCRIPT (== SIGNIF IGUAL) (= SIGNIF. RECEBE)
        (IF SE) O MENU ESTIVER SENDO EXIBIDO (BLOCK). EU CLIQUEI. (NONE) ELE ESCODE.
        (ELSE SE NÃO) BLOCK ELE MOSTRA O MENU NOVAMENTE-->
     </main>
@@ -48,6 +50,18 @@
                 itens.style.display = 'block'
             }
 
+        }
+
+        /*função do menu (if >= se o tamanho da tela for maior ou igual a 768px) mostro em bloco. Para o menu poder aparecer em bloco sem essa função em javascript não estava aparecendo ao aumentar a tela.*/
+        function mudouTamanho() {
+            if (window.innerWidth >= 768){
+                itens.style.display = 'block'
+            }
+            
+            else {
+                itens.style.display = 'none'
+            }
+            
         }
     </Script>
 </body>

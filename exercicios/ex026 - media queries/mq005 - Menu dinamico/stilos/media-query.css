@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+/*Todas as demais mídias*/
+
+/*typical device breakpoints
+------------------------------
+Pequenas telas: até 600px
+Celular: de 600px até 780px
+Tablet: 768px até  992px
+Desktop: 992px até  1200px
+Grandes telas: acima de 1200px
+*/
+
+/*TELAS MAIORES QUE 768PX NÃO MOSTRARA O ICONE BURGUER NO MENU*/
+@media screen and (min-width: 768px) {
+    span#burguer {
+        display:none;/*para sumir o icone de burguer em telas maiores*/
+    }
+
+menu {
+    display: block; /*para aparecer o menu opções em telas maiores*/
+}
+
+menu > ul > li {
+    display: inline-block; /*menu opções ficar um do lado do outro*/
+}
+
+main {
+    width: 768px;
+}
+    
+}
