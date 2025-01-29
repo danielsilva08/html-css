@@ -7,7 +7,10 @@
     <style>
         div.conteiner {
             display: flex; /*fica um na frete do outro porém em tamanho pequenos*/
-            flex-flow: row wrap;
+            flex-flow: row wrap; /*fica em linha e quebra caso diminua a página*/
+            align-items: flex-start;
+
+            height: 400px;
 
             background-color: orange;
 
@@ -21,25 +24,26 @@
         }
 
         div#i1 {
-            order: 0;
+            align-self: auto;
+            
         }
         div#i2 {
-            order: -2;
+            
         }
         div#i3 {
-            order: 4;
+            align-self: flex-end;
         }
         div#i4 {
-            order: 8;
+            
         }
         div#i5 {
-            order: 2;
+           align-self: center;
         }
         div#i6 {
-            order: 0;
+            
         }
         div#i7 {
-            order: -4;
+           align-self: stretch;
         }
         
     </style>
