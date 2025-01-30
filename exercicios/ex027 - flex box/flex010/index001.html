@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+        div.conteiner {
+            display: flex; /*fica um na frete do outro porém em tamanho pequenos*/
+            flex-flow: row nowrap;
+
+            background-color: orange;
+
+        }
+
+        div.item {
+            background-color: aqua;
+            border: 1px solid black;
+            text-align: center;
+
+            flex-basis: 250px;
+            flex-shrink: 1; /*1 itens pode encolher se colocar 0 ele não pode encolher e causa quebra vasa do conteiner pai*/
+            flex-grow: 0; /*0 itens não pode crescer se colocar 1 pode crescer ele cresce junto com conteiner pai*/
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+      
+    </div>
+</body>
+</html>
