@@ -8,18 +8,45 @@ body {
     width: 100vw;
 }
 header {
-    background-color: rgb(63, 87, 221);
+    background-color: rgb(38, 107, 185);
     color: white;
     padding: 10px;
+
+    display: flex; /*Só de colocar está opção o menu de opções vai pro lado da escrita site. Eixo principal deitado*/
+    flex-wrap: row wrap; /*Ao diminuir a tela o menu de opções quebra para baixo*/ 
+    justify-content: space-between; /* O menu opções vai para o lado esquedo da tela. Separando da escrita meu site que permanesse a esqueda da tela*/
+    align-items: center; /*Usado para o eixo tranversal cima para baixo. O Menu de Opções fica uma puco mais abaixo centralizado ao canto esquerdo da tela*/
+
 }
 
 header > h1 {
-    border: 1px dotted black;
+    flex: 0 0 250px; /*Escrita não vai crescer nem encolher e vai ficar fixo em 250px*/
+    
 }
 
 header > nav {
-    border: 1px dotted black;
+    display: flex;
+    flex-flow: row wrap; /*Para quebrar ao diminuir a tela*/
+    justify-content: flex-end; /*Para o menu quebrar sempre no final ao diminuir a tela*/
+
 }
+
+header > nav > a {
+    background-color: rgb(22, 66, 116);
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    text-decoration: none; /*TIRA O SUBLINHADO*/
+    text-align: center;
+}
+
+header > nav > a:hover {
+    background-color: white; /*Passa da cor azul para a Branca*/
+    color: black; /*Letra passa do branco para o preto*/
+    transition: background-color .5s;
+}
+
 main {
     background-color: white;
     margin: 10px;
