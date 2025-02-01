@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+header, header > nav {
+    flex-flow: column nowrap; /*opção menu fica em coluna ao centro*/
+}
+
+header > h1 {
+    flex-basis: 50px; /*Escriota meu site fica mais proximo da opçao menu em coluna*/
+}
+
+header > nav > a {
+    width: 90vw; /*tamanho das opções menu*/
+}

@@ -20,11 +20,16 @@ header {
 }
 
 header > h1 {
+    /*border: 1px dotted black;*/
+
     flex: 0 0 250px; /*Escrita não vai crescer nem encolher e vai ficar fixo em 250px*/
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.404);
     
 }
 
 header > nav {
+    /*border: 1px dotted black;*/
+
     display: flex;
     flex-flow: row wrap; /*Para quebrar ao diminuir a tela*/
     justify-content: flex-end; /*Para o menu quebrar sempre no final ao diminuir a tela*/
